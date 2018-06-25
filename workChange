@@ -1,2 +1,5 @@
 safari根据plist更新:
 itms-services://?action=download-manifest&url=       ftp路径
+
+ServletContextListner下contextInitialized() -->timer.schedule(new TinerTask(){},0,1000) 多次初始化resource下配置文件
+
