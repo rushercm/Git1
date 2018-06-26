@@ -1,0 +1,60 @@
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.RequestBody;
+import okhttp3.Request;
+import okhttp3.Response;
+
+import java.io.IOException;
+
+//okhttp请求(含header传参)
+public class PushHttp {
+
+    public static void doPost(String url, byte[] body, String auth) {
+        MediaType jsonType = MediaType.parse("application/json; charset=utf-8");
+        OkHttpClient client = new OkHttpClient();
+
+        RequestBody requestBody = RequestBody.create(jsonType, body);
+        Request request = new Request.Builder()
+                .url(url)
+                .header("Authentication", auth)
+                .post(requestBody)
+                .build();
+        Response response = null;
+
+        try {
+            response = client.newCall(request).execute();
+            if (response.isSuccessful()) {
+                String resp = response.body().string();
+                System.out.println("[INFO] response:" + resp);
+            } else {
+                System.out.println("[ERROR]");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    //HTTP传参加密：base64(hmac-sha256(body, app-secret))
+    public static String getAuth(byte[] data, String key) {
+        byte[] secretKey = key.getBytes(Charset.forName("UTF-8"));
+
+        byte[] bytes = null;
+        SecretKeySpec signingKey = new SecretKeySpec(secretKey, "HmacSHA256");
+        try {
+            Mac mac = Mac.getInstance("HmacSHA256");
+            mac.init(signingKey);
+            bytes = mac.doFinal(data);
+        } catch (NoSuchAlgorithmException e) {
+            log.info("NoSuchAlgorithmException:" + e.toString());
+            return null;
+        } catch (InvalidKeyException e) {
+            log.info("InvalidKeyException:" + e.toString());
+            return null;
+        }
+        if (bytes == null) {
+            return null;
+        }
+
+        return "Wpush " + Base64.encodeBase64(bytes);
+    }
+}
