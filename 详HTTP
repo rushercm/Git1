@@ -8,7 +8,7 @@ https://my.oschina.net/u/1859679/blog/1835423
 
 
 App与服务器Auth:ios抓包工具charles(青花瓷)
-避免抓包:数据加密(RSA,AES) toke验证机制+https  ++ 分析网络是否使用代理
+避免抓包:数据加密(RSA,AES) toke验证机制+https(tomcat下 keystore+ssl配置验证)  ++ 分析网络是否使用代理
 
                                             -->  private boolean isWifiProxy() { 
                                             final boolean IS_ICS_OR_LATER = Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH; 
