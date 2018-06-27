@@ -3,3 +3,6 @@
 传输层(TCP)保证数据包的完整、有序及可靠
 应用层(HTTP SMTP)
 MSS是TCP能传输的最大数据分段 533字节  SEQ(序列号)和ACK(接收包时确认)保证超时重发机制  wiershark抓包工具
+
+
+https://my.oschina.net/u/1859679/blog/1835423
