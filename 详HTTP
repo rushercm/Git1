@@ -17,3 +17,9 @@ App与服务器Auth:ios抓包工具charles(青花瓷)
                                             proxyPort = Integer.parseInt((portStr != null ? portStr : "-1")); } else { proxyAddress = android.net.Proxy.getHost(this); 
                                             proxyPort = android.net.Proxy.getPort(this); } return (!TextUtils.isEmpty(proxyAddress)) && (proxyPort != -1); 
                                             }
+防止根据会话固定攻击:request.getSession(true).invalidate();//清空session
+
+                  Cookie cookie = request.getCookies()[0];//获取cookie
+                  cookie.setMaxAge(0);//让cookie过期
+                  
+                  <% page session=”false” %> (JSP不保存session)
