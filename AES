@@ -8,6 +8,14 @@ import javax.crypto.spec.SecretKeySpec;
 import java.io.UnsupportedEncodingException;
 import java.security.SecureRandom;
 
+
+linux下decrypt解密
+
+            SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
+            secureRandom.setSeed(password.getBytes());
+            KeyGenerator kgen = KeyGenerator.getInstance("AES");
+            kgen.init(128, secureRandom);
+
 //十六进制转二进制（加密串只含有字母和数字，防止HTTP传参出现斜杠等特殊字符）
 public class AES {
     /**
