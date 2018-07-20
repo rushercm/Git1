@@ -23,3 +23,6 @@ App与服务器Auth:ios抓包工具charles(青花瓷)
                   cookie.setMaxAge(0);//让cookie过期
                   
                   <% page session=”false” %> (JSP不保存session)
+
+
+安卓5以下 h5或JSP EL表达式兼容问题 (变量写)
