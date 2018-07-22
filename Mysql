@@ -1,3 +1,5 @@
 锁升级：行级锁 -> 表级锁(额外开销，要有死锁监测机制)
   lock:对象是事务，锁定的是数据库中的对象(表、页、行)，在事务commit或rollback时释放，存在于Lock Manager的哈希表中
   latch(mutex互斥量和rwlock读写锁):对象是线程，保护(锁定)的是内存数据结构，show engine innodb mutex查看
+  
+debug模式:在 cmake 的时候，增加参数 cmake -WITH_DEBUG=1   
