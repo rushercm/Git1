@@ -7,5 +7,7 @@ debug模式:在 cmake 的时候，增加参数 cmake -DWITH_DEBUG=1
 索引:B+树:B树和ISAM(顺序罗列方法)结合，既可以像二叉平衡树所有旋，也可以删除，两层叶子结点
     辅助索引:不保存每行所有信息，explain sql时可看索引优化，
     聚集索引:组合索引 show engine innodb index 最左匹配，b未必排序，在leaf节点双向链表，(1,2)最左排序
+
+https://linux.linuxidc.com/index.php
  
 
