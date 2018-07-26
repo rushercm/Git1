@@ -9,5 +9,10 @@ debug模式:在 cmake 的时候，增加参数 cmake -DWITH_DEBUG=1
     聚集索引:组合索引 show engine innodb index 最左匹配，b未必排序，在leaf节点双向链表，(1,2)最左排序
 
 https://linux.linuxidc.com/index.php
+
+
+group_concat
  
+
+
 
