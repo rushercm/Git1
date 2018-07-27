@@ -1,0 +1,5 @@
+类Hive型SQL查询开源:
+    impala（Cloudera）:为HDFS和HBase提供实时SQL查询，脱离了Map/Reduce
+    drill（Apache）:
+    singer(Hortonworks):hive之上加了优化层(Tez基于Yarn)
+    
