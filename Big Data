@@ -2,4 +2,8 @@
     impala（Cloudera）:为HDFS和HBase提供实时SQL查询，脱离了Map/Reduce
     drill（Apache）:
     singer(Hortonworks):hive之上加了优化层(Tez基于Yarn)
-    
+
+Hive:between .. and ..(边界值)
+    lead(,0,) over()：向后
+    lag()over()：向前
+    unix_timestamp()
