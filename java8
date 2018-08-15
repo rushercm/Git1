@@ -1,0 +1,8 @@
+stream(多核):lamda,串/并行，fork/join（迭代器的并行化），链表管道化
+      lists.parallelStream.
+      filter(t -> t.get == '').
+      sorted().
+      map().
+      collect(Collectors.toList());
+https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/      
+      
