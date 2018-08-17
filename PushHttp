@@ -60,3 +60,4 @@ public class PushHttp {
 }
 
 SHA256(SHA256（block header）):值符合一定条件就形成一个区块，否则要不断遍历 block header里的随机数-->挖矿
+https://www.cnblogs.com/jsjwk/p/9476175.html
