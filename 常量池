@@ -1,2 +1,4 @@
 jdk1.6：当没有时，添加到运行时常量池
 jdk1.7：当没有时，添加到常量池的是堆的引用 
+
+https://www.cnblogs.com/kubidemanong/p/9486688.html
