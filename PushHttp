@@ -58,3 +58,5 @@ public class PushHttp {
         return "Wpush " + Base64.encodeBase64(bytes);
     }
 }
+
+SHA256(SHA256（随机数）):值符合一定条件就形成一个区块header，否则要不断遍历 随机数-->挖矿
