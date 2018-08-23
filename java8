@@ -7,4 +7,7 @@ stream(多核):lamda,串/并行，fork/join（迭代器的并行化），链表�
     foreach是terminal,peek操作多次  
 
 https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/      
+
+default method :允许在接口中实现方法，类实现多个接口时，可直接调用方法(多继承)
+                避免了接口与实现类高耦合度
       
