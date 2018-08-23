@@ -10,4 +10,15 @@ https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/
 
 default method :允许在接口中实现方法，类实现多个接口时，可直接调用方法(多继承)
                 避免了接口与实现类高耦合度
-      
+     -->参考新版foreach:
+      package java.lang;    
+      import java.util.Objects;
+      import java.util.function.Consumer;  
+      public interface Iterable<T> {
+        default void forEach(Consumer<? super T> action) {
+            Objects.requireNonNull(action);
+            for (T t : this) {
+                action.accept(t);
+            }
+        }
+    }
