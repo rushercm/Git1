@@ -1,0 +1,3 @@
+https://www.cnblogs.com/zuolun2017/p/8028208.html
+-->setNX（set if Not eXits） 当key存在时 返回0且不可改变
+-->getset:返回key的旧值value 当锁持有超时，可用来判断是否超出当前时间
