@@ -21,5 +21,9 @@ group_concat
 
  
 阿里开源Canal:基于mysql数据库binlog的增量订阅&消费
+    1.canal模拟mysql slave的交互协议，伪装自己为mysql slave，向mysql master发送dump协议
+    2.mysql master收到dump请求，开始推送binary log给slave(也就是canal)
+    3.canal解析binary log对象(原始为byte流)
+
 
 
