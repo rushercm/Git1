@@ -28,6 +28,8 @@ group_concat
 Explain：mysql执行计划
         https://www.cnblogs.com/wanbin/p/9565799.html
 
+
+http://www.infoq.com/cn/articles/database-timestamp-02?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk
 Term Index (a,b..) -> Term Dictionary(Ada../Bob) ->Posting List([],[])
 Mysql只有term dictionary这一层，是以b-tree排序的方式存储在磁盘上的。检索一个term需要若干次的random access的磁盘操作。
 而Lucene在term dictionary的基础上添加了term index来加速检索，term index以树的形式缓存在内存中。
