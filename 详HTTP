@@ -26,3 +26,6 @@ App与服务器Auth:ios抓包工具charles(青花瓷)
 
 
 安卓5以下 h5或JSP EL表达式兼容问题 (变量写)
+
+
+Html中name="referrer" JS获取上一访问页面URL地址document.referrer 
