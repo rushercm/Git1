@@ -12,3 +12,6 @@ Jedis <--> Lettuce(线程安全，异步可监控)
 
 cpu过高分析：https://my.oschina.net/u/1420452/blog/2245304
 堆栈文件分析：http://fastthread.io/index.jsp
+
+
+create gist(idea):gist.github（私有代码共享，可分享但不可被搜索到）
