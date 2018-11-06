@@ -1,0 +1,10 @@
+Docker镜像通过Dockerfile按命令步骤生成；
+
+Dockerfile:1. From ubuntu（指定当前环境）
+           2.MAINTAINER 。。
+           3.run echo 'Asia/Shanghai' （指定时区）
+           4.run apt-get (安装curl，vim等软件)
+           5.WORKDIR （指定默认工作空间当前目录） /app  (docker run时可不指定/app目录，默认带上)
+           6.run curl -L '下载地址' (安装jdk，tomcat)等
+           7.EXPOSE 8080 指定端口
+           8.ENTRYPOINT ["app/tomcat7.sh"]  (最后一步 使生效)
