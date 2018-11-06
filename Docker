@@ -1,5 +1,5 @@
 Docker镜像通过Dockerfile按命令步骤生成；
-
+https://www.oschina.net/question/584116_2209819
 Dockerfile:1. From ubuntu（指定当前环境）
            2.MAINTAINER 。。
            3.run echo 'Asia/Shanghai' （指定时区）
