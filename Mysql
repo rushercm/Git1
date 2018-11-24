@@ -37,3 +37,12 @@ Mysql只有term dictionary这一层，是以b-tree排序的方式存储在磁盘
 
 
 mysql8.0 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password, 解决此问题方法有两种,一种是升级客户端驱动,一种是把mysql用户登录密码加密规则还原成mysql_native_password
+
+
+Group By临时表：
+    1. 如果GROUP BY 的列没有索引,产生临时表.
+　　2. 如果GROUP BY时,SELECT的列不止GROUP BY列一个,并且GROUP BY的列不是主键 ,产生临时表.
+　　3. 如果GROUP BY的列有索引,ORDER BY的列没索引.产生临时表.
+　　4. 如果GROUP BY的列和ORDER BY的列不一样,即使都有索引也会产生临时表.
+　　5. 如果GROUP BY或ORDER BY的列不是来自JOIN语句第一个表.会产生临时表.
+　　6. 如果DISTINCT 和 ORDER BY的列没有索引,产生临时表.
