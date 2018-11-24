@@ -46,3 +46,8 @@ Group By临时表：
 　　4. 如果GROUP BY的列和ORDER BY的列不一样,即使都有索引也会产生临时表.
 　　5. 如果GROUP BY或ORDER BY的列不是来自JOIN语句第一个表.会产生临时表.
 　　6. 如果DISTINCT 和 ORDER BY的列没有索引,产生临时表.
+
+内联表查询一般的执行过程是： 
+   1、执行FROM语句 2、执行ON过滤 3、添加外部行 4、执行where条件过滤 5、执行group by分组语句 
+   6、执行having 7、select列表 8、执行distinct去重复数据 9、执行order by字句 10、执行limit字句
+
