@@ -87,3 +87,10 @@ MySQL临时表分为“内存临时表”和“磁盘临时表”，其中内存
     如何判断使用了临时表？
 
 使用explain查看执行计划，Extra列看到Using temporary就意味着使用了临时表。
+
+
+binlog格式:statement(日志保存执行语句),row(日志保存被修改的记录),mixed
+      查看:show variables like 'binlog_format'或cat /etc/my.cnf
+      修改:set globle binlog_format='MIXED'
+      https://blog.csdn.net/ouyang111222/article/details/50300851
+  
