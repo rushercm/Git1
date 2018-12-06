@@ -1,7 +1,13 @@
 锁升级：行级锁 -> 表级锁(额外开销，要有死锁监测机制)
   lock:对象是事务，锁定的是数据库中的对象(表、页、行)，在事务commit或rollback时释放，存在于Lock Manager的哈希表中
   latch(mutex互斥量和rwlock读写锁):对象是线程，保护(锁定)的是内存数据结构，show engine innodb mutex查看
-  
+<!-----------------------------  
+出现死锁的时候，如果只是想解锁，用show full processlist看下kill掉就好了，如果想查找到详细的问题，一个办法是用show engine innodb status来查看简略信息或者开死锁日志，后期在mysql日志里面慢慢分析。
+以上这写方法我们都用过，最近在看Innodb的书的时候发现另一种实时的分析方法，能最大限度的分析死锁的原因。
+
+MySQL 5.5 版本以后，information_schema（ski:mə） 库中新增了三个关于锁的表，亦即 innodb_trx 、innodb_locks 和 innodb_lock_waits 。
+其中 innodb_trx 表记录当前运行的所有事务，innodb_locks 表记录当前出现的锁，innodb_lock_waits 表记录锁等待的对应关系。  
+<!------------------------------  
 debug模式:在 cmake 的时候，增加参数 cmake -DWITH_DEBUG=1   
 
 索引:B+树:B树和ISAM(顺序罗列方法)结合，既可以像二叉平衡树所有旋，也可以删除，两层叶子结点
