@@ -116,3 +116,7 @@ binlog格式:statement(日志保存执行语句),row(日志保存被修改的记
           其他函数：nth_value() / nfile()
  <!======================================================================         
 
+5.5之后引入MDL事务级别的锁不论对myisam还是innodb都是生效的
+-->show variables like "%autocommit%" 
+---->系统的事务自动提交的变量，autocommit的值是ON，那说明如果是事务未提交的话只可能是业务主动的开启一个事务，而没有commit
+---->general log，在log中，业务在开启事务后，把autocommit的值设为0了，导致必须要显示的commit才能提交事务
