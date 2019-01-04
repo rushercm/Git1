@@ -133,8 +133,7 @@ binlog格式:statement(日志保存执行语句),row(日志保存被修改的记
 
 mysql提供了两个方法来处理ip地址
 
-inet_aton 把ip转为无符号整型(4-8位)
-inet_ntoa 把整型的ip转为地址
+inet_aton 把ip转为无符号整型(4-8位),inet_ntoa 把整型的ip转为地址
 
 插入数据前，先用inet_aton把ip地址转为整型，可以节省空间
 显示数据时，使用inet_ntoa把整型的ip地址转为地址显示即可。
@@ -148,4 +147,4 @@ UNSIGNED INT 0~4294967295
 VARCHAR(N)中的N代表的是字符数，而不是字节数
 使用UTF8存储255个汉字 Varchar(255)=765个字节
 
-过大的长度会消耗更多的内存
+过大的长度会消耗更多的内存  https://www.cnblogs.com/huchong/p/10219318.html
