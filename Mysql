@@ -148,3 +148,12 @@ VARCHAR(N)中的N代表的是字符数，而不是字节数
 使用UTF8存储255个汉字 Varchar(255)=765个字节
 
 过大的长度会消耗更多的内存  https://www.cnblogs.com/huchong/p/10219318.html
+
+
+<!-------------------------------------------------------------------
+explain查询语句时，显示using filesort
+加order by null 这样在group by的时候默认不排序，可以去掉filesort,但file sort一般不是性能关键
+
+
+
+加order by null 这样在group by的时候默认不排序，可以去掉filesort
