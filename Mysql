@@ -61,7 +61,10 @@ Group By临时表：
 
 MySQL临时表分为“内存临时表”和“磁盘临时表”，其中内存临时表使用MySQL的MEMORY存储引擎，磁盘临时表使用MySQL的MyISAM存储引擎；
 一般情况下，MySQL会先创建内存临时表，但内存临时表超过配置指定的值后，MySQL会将内存临时表导出到磁盘临时表；
-
+<!---------------------------------------------------------------------------临时表优化------------------------>
+不使用 in(查询) 而是关联 子查询 t1,() t2 where t1.id = t2.caId
+因为mysql不是由内而外，而是先查大表之后再跟子查询关联
+https://www.cnblogs.com/zhengyun_ustc/p/slowquery3.html
     使用临时表的场景
 
 1）ORDER BY子句和GROUP BY子句不同， 例如：ORDERY BY price GROUP BY name；
