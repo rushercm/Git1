@@ -1,0 +1,6 @@
+redis-module:
+  1.自定义扩展 redis 的模块, 当然相比 redis lua 脚本来说，还是有些学习成本的…
+  2.psync2 他的好处在于 redis 主从切换后，不需要重新进行 重新 fullsync 同步，只需要部分同步，有点类似 binlog 那种. 具体实现还没看，
+阿里自己是通过 timestamp 时间戳实现的.
+  3.memory 指令可以估算内容大小
+  4.非数据命令的异步执行，我们知道 redis 处理请求是单线程的，执行数据偏大的 flush 及 del 会阻塞的，redis 4.0 加了异步操作的功能….
