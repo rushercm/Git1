@@ -6,3 +6,6 @@ redis-module:
 阿里自己是通过 timestamp 时间戳实现的.
   3.memory 指令可以估算内容大小
   4.非数据命令的异步执行，我们知道 redis 处理请求是单线程的，执行数据偏大的 flush 及 del 会阻塞的，redis 4.0 加了异步操作的功能….
+  -->BloomFilter(布隆过滤器):大数据量快速查找(多次hash)，bitArray动态扩容
+  -->RedisSearch:高性能的全文搜索引擎，可作为一个Redis Module 运行,类似ES
+  -->Redis-ML
