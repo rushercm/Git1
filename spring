@@ -3,3 +3,5 @@
 
 spring事务传播特性之嵌套事务:https://blog.csdn.net/zmx729618/article/details/77976793
 
+spring事务create及commit中间非线程安全，只在service方法上加synchronized不能保证 AspectTransaction
+
