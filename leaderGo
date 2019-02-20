@@ -1,1 +1,11 @@
 极客时间 陈皓(左耳听风) :https://coolshell.cn/
+
+jdk6引入serviceProvider
+
+-->   概念上更接近实现方组织上位于实现方所在的包中实现和接口在一个包中
+
+-->当接口属于调用方时，我们就将其称为spi，全称为：service provider interface，spi的规则如下：
+    概念上更依赖调用方组织上位于调用方所在的包中实现位于独立的包中（也可认为在提供方中）
+    ServiceLoader可以通过service provider的配置文件来装载指定的service provider。当服务的提供者，提供了服务接口的一种实现之后，
+    我们只需要在jar包的META-INF/services/目录里同时创建一个以服务接口命名的文件。该文件里就是实现该服务接口的具体实现类。
+    而当外部程序装配这个模块的时候，就能通过该jar包META-INF/services/里的配置文件找到具体的实现类名，并装载实例化，完成模块的注入。
