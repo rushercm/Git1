@@ -1,0 +1,3 @@
+LCN（https://github.com/codingapi/tx-lcn）的2pc型无侵入事务，目前lcn已发展到5.0，已支持和fescar事务模型类似的TCX型事务。
+还有如TCC型事务实现hmily（https://github.com/yu199195/hmily）、tcc-transaction(https://github.com/changmingxie/tcc-transaction)
+fescar(https://github.com/alibaba/fescar)
