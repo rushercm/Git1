@@ -22,3 +22,10 @@ default method :允许在接口中实现方法，类实现多个接口时，可�
             }
         }
     }
+
+
+System.exit(1)：Runtime.getRuntime.shutdown()关闭了jvm，下面代码1不会执行
+
+copyonwrite：弱一致性(add和get时，若有修改，不能保证修改的数据实时被看到)
+      -->Arrays.copyOf()：先拷贝，实现并发非阻塞 CopyOnWriteArrayList:
+            
