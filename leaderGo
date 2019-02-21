@@ -12,3 +12,7 @@ jdk6引入serviceProvider
 -->DriverManager初始化时也运用了spi的思想，使用ServiceLoader把写到配置文件里的Driver都加载了进来。
    我们打开mysql-connector-java的jar包，果然在META-INF/services下发现了上文中提到的接口路径，打开里面的内容，
    可以看到是com.mysql.jdbc.Driver
+
+jvm tomcat 类加载：
+    -->tomcat下catalina.properties common.loader ->https://zhuanlan.zhihu.com/p/24168200
+        
