@@ -14,3 +14,6 @@ Number.EPSILON=(function(){     //解决兼容性问题
 function numbersequal(a,b){  
         return Math.abs(a-b)<Number.EPSILON;
     }
+
+
+浏览器是如何工作的：https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/
