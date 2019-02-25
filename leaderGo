@@ -15,4 +15,6 @@ jdk6引入serviceProvider
 
 jvm tomcat 类加载：
     -->tomcat下catalina.properties common.loader ->https://zhuanlan.zhihu.com/p/24168200
+
+linux:nohub 后台执行 ./mqnamesr
         
