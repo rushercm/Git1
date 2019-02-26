@@ -17,4 +17,8 @@ jvm tomcat 类加载：
     -->tomcat下catalina.properties common.loader ->https://zhuanlan.zhihu.com/p/24168200
 
 linux:nohub 后台执行 ./mqnamesr
+
+
+Netty:基于JDK中Future的基础上，添加异步监听等方法，反映了Netty事件驱动的本质
+    ChannelFuture extends Future<>,Promise extends Future 
         
