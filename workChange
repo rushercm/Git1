@@ -18,3 +18,7 @@ create gist(idea):gist.github（私有代码共享，可分享但不可被搜索
 运维日记:https://www.kancloud.cn/devops-centos/centos-linux-devops/558438
 动态规划:https://www.geeksforgeeks.org/dynamic-programming/
 Netty分析:https://www.kancloud.cn/ssj234/netty-source/433215
+
+AVL树:左旋或右旋四种情况(LL,RR(前两种只需一次旋转，找前驱或后继节点),RL,LR(后两种则要先局部旋再整体旋))
+TreeMap:lastKey(返回key的最大值), ceilingKey(返回刚比所传key大的key值),floorKey(返回刚比所传key小的key值),复杂度O(logn)
+            -->如果是链表，则只能遍历，效率差
