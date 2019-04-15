@@ -500,3 +500,5 @@ Mysql在5.0这个版本以前，binlog只支持STATEMENT这种格式！而这种
     OK,在该隔离级别下，用的binlog为row格式，是基于行的复制！Innodb的创始人也是建议binlog使用该格式！
 
 https://www.cnblogs.com/rjzheng/p/9950951.html
+
+https://my.oschina.net/u/4106059/blog/3034844
