@@ -22,3 +22,7 @@ Netty分析:https://www.kancloud.cn/ssj234/netty-source/433215
 AVL树:左旋或右旋四种情况(LL,RR(前两种只需一次旋转，找前驱或后继节点),RL,LR(后两种则要先局部旋再整体旋))
 TreeMap:lastKey(返回key的最大值), ceilingKey(返回刚比所传key大的key值),floorKey(返回刚比所传key小的key值),复杂度O(logn)
             -->如果是链表，则只能遍历，效率差
+
+
+同一个主程中业务多模块执行解耦：基于spring事件驱动，实现ApplicationListener接口，
+-->可配置权重优先级SmartApplicationListner;https://www.cnblogs.com/l3306/p/10757291.html
