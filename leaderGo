@@ -23,3 +23,4 @@ Netty:基于JDK中Future的基础上，添加异步监听等方法，反映了Ne
     ChannelFuture extends Future<>,Promise extends Future  https://www.kancloud.cn/ssj234/netty-source/433211     
 
         
+java内存分布:https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247484884&amp;idx=1&amp;sn=0d9b841ce0fc300c78ade2a87ffbfb46&source=41#wechat_redirect
