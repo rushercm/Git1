@@ -502,3 +502,6 @@ Mysql在5.0这个版本以前，binlog只支持STATEMENT这种格式！而这种
 https://www.cnblogs.com/rjzheng/p/9950951.html
 
 https://my.oschina.net/u/4106059/blog/3034844
+
+
+Mysql 5.6以后 索引下推（会过滤组合索引中条件，避免回表次数） 覆盖索引（不回表主键，在普通索引叶子节点可获取数据）
