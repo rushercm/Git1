@@ -29,3 +29,10 @@ javap是jdk自带的反解析工具。它的作用就是根据class字节码文�
 
 linux调优:uptime - top(3秒) - pidstat - perf top (perf record记录) - vmstat - iostat 
       -->模拟压测(并发调用，多次):apachebench - sysbench - webbench - http_load - siege
+
+缓存/数据库同步策略：              一 1.先删除缓存；2.再写数据库；3.休眠500毫秒；4.再次删除缓存（缓存淘汰或到期自动刷新，设置不同淘汰时间兜底）。
+异步订阅binlog推送Redis （Canal） 二 读Redis：1.热数据基本都在Redis；2.写MySQL:增删改都是操作MySQL；3.更新Redis数据：MySQ的数据操作binlog，来更新到Redis
+
+分库分表路由策略（无限扩容，权重有取舍的分配）：hash和range：类似ConcurrentHashMap(以id（0-400万）划分group1，如果要扩容（之后（400万-880万）数据落在group2）)，
+                     -->之后根据hash取模落在不同的水平分库上（DB_1....），之后再range落在不同的水平分表上（Table_1.....）
+                
