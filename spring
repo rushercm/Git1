@@ -5,3 +5,5 @@ spring事务传播特性之嵌套事务:https://blog.csdn.net/zmx729618/article/
 
 spring事务create及commit中间非线程安全，只在service方法上加synchronized不能保证 AspectTransaction
 
+spring-actuator做度量统计收集，使用Prometheus（普罗米修斯）进行数据收集，Grafana（增强ui）进行数据展示，用于监控生成环境机器的性能指标和业务数据指标。一般，我们叫这样的操作为”埋点”。SpringBoot中的依赖spring-actuator中集成的度量统计API使用的框架是Micrometer，官网是Micrometer.io
+
