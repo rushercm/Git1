@@ -332,3 +332,4 @@ zookeeper实现(zxid(事务id),版本号，时间戳)
 1.持久化节点：create 
 2.临时节点:create -e (当会话结束会自动删除)
 3.顺序节点: create -s (最靠前的client创建可获取锁)
+4.Paxos算法(分布式一致性(希腊城邦选举算法))
