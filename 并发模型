@@ -26,3 +26,15 @@
       也就是会出现我们value没被回收，key被回收，导致value永远存在，出现内存泄漏。这也是ThreadLocal经常会被很多书籍提醒到需要remove()的原因;
       -->很多源码的ThreadLocal并没有写remove依然再用得很好呢？那其实是因为很多源码经常是作为静态变量存在的生命周期和Class是一样的，
       而remove需要再那些方法或者对象里面使用ThreadLocal，因为方法栈或者对象的销毁从而强引用丢失，导致内存泄漏.
+      
+      
+ JMM内存模型:     
+ volatile:避免指令重排序(被修饰时，会插入Write-Barrier内存屏障);     
+ as-if-serial:无论如何重排序，单线程下最终结果不会变;  
+ happens-before:一个操作的执行结果需要对另一个操作可见，那么这两个操作之间必须要存在happens-before关系(一个或两个线程中)，
+                仅仅要求可见，不要求前一个一定在后一个之后执行；
+            ->程序顺序规则：一个线程中的每个操作，happens-before于该线程中任意的后续操作。
+            ->监视器锁规则：对一个锁的解锁操作，happens-before于随后对这个锁的加锁操作。
+            ->volatile域规则：对一个volatile域的写操作，happens-before于任意线程后续对这个volatile域的读。
+            ->传递性规则：如果 A happens-before B，且 B happens-before C，那么A happens-before C。   
+ 
