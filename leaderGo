@@ -53,3 +53,7 @@ HashMap（开放链表hash寻址）:1.为什么可以使用位运算(&)来实现
 
 
 电子书：https://www.itpanda.net/book/
+
+
+
+时序数据库:InfluxDB（+grafana可用于k8s可视化）
