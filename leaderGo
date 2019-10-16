@@ -54,6 +54,9 @@ HashMap（开放链表hash寻址）:1.为什么可以使用位运算(&)来实现
 
 电子书：https://www.itpanda.net/book/
 
+docker网络模型:1.Bridge:主机利用虚拟网桥/虚拟网卡分配 2.Host：与主机共享网络network namespace，但文件系统等依然隔离；
+              3.Container：与其他容器共享网络network namespace，但不共享文件系统等；
+              4.None:主机不分配，用户手动分配；
 
 
 时序数据库:InfluxDB（+grafana可用于k8s可视化）
