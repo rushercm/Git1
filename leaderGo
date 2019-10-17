@@ -65,3 +65,8 @@ Kubernetes的网络模型组成
               4.外界与Service之间网络通信[Kubernetes网络理论]
 
 时序数据库:InfluxDB（+grafana可用于k8s可视化）
+
+
+TCP:seq number ack滑动窗口
+    握手(SYN-ACK可以一起，所以三次握手）;
+    挥手(FIN只能单独发送，确认没有消息互发了，之后三次挥手断开连接)
