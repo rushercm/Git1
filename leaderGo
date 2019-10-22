@@ -97,3 +97,4 @@ CMS和g1区别:
        根集合(记忆集)；卡表(脏卡标记GC Roots，老年代对年轻代的引用));
 https://www.cnblogs.com/heyonggang/p/11718170.html
 
+iproute工具包取代net-tools下的ifconfig，route，ifup，ifdown，netstat等命令
