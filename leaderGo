@@ -112,3 +112,5 @@ CORS请求:请求头多了origin字段,
                  Access-Control-Allow-Credentials: true
                  Access-Control-Expose-Headers: FooBar
                  Content-Type: text/html; charset=utf-8
+                 
+      -->JSONP只支持Get请求，可兼容老式浏览器           
