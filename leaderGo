@@ -107,4 +107,8 @@ java四种引用:1.强引用：new对象和string复制，gc不可回收，会�
             3.WeakReference:无论内存充足与否都会被回收;  
             4.虚引用（PhantomReference）
             
-CORS请求:请求头多了origin字段
+CORS请求:请求头多了origin字段,
+      -->服务端返回Access-Control-Allow-Origin: http://api.bob.com
+                 Access-Control-Allow-Credentials: true
+                 Access-Control-Expose-Headers: FooBar
+                 Content-Type: text/html; charset=utf-8
