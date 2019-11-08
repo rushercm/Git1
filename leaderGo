@@ -67,7 +67,7 @@ Kubernetes的网络模型组成
 时序数据库:InfluxDB（+grafana可用于k8s可视化）
 
 
-TCP:seq number ack滑动窗口
+TCP:seq number ack滑动窗口(HTTP2.0概念)
     握手(SYN-ACK可以一起，所以三次握手）;
     挥手(FIN只能单独发送，确认没有消息互发了，之后三次挥手断开连接)
 
@@ -107,5 +107,4 @@ java四种引用:1.强引用：new对象和string复制，gc不可回收，会�
             3.WeakReference:无论内存充足与否都会被回收;  
             4.虚引用（PhantomReference）
             
-iproute工具包取代net-tools下的ifconfig，route，ifup，ifdown，netstat等命令引用
-iproute工具包取代net-tools下的ifconfig，route，ifup，ifdown，netstat等命令
+CORS请求:请求头多了origin字段
