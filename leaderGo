@@ -115,3 +115,7 @@ CORS请求:请求头多了origin字段,
                  
       -->JSONP只支持Get请求，可兼容老式浏览器
 Vue/React虚拟dom:diff算法（比较new和old的差异，js原生构建dom太耗性能),只比较同层级，先比较父再比较child
+
+js模块化:
+<script src="js/require.js" defer async="true" ></script>
+async属性表明这个文件需要异步加载，避免网页失去响应。IE不支持这个属性，只支持defer，所以把defer也写上。
