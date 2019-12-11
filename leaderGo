@@ -127,4 +127,7 @@ Flux 的最大特点，就是数据的"单向流动"。
     Store 更新后，发出一个"change"事件
     View 收到"change"事件后，更新页面
 
-IO设计模式：Actor、Reactor、Proactor
+IO设计模式：Actor、Reactor、Proactor;
+
+Storm()： spout(水龙头)-tuple(元数组)-> Bolt（处理） -tuple-> Bolt(另一个) ->---流数据无限处理中..
+        zookeeper:Nimbus(主） Supervisor(从;以Topology(包含多个进程)处理) 
