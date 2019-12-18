@@ -217,5 +217,5 @@ redis分布式锁进化 set(先查有没有，没有就设置，但会存在同�
                 ->setnx+setx(先setnx，之后setx设置过期时间（但会存在setnx和setx之间时挂掉）) 2.6.12之前这样用
                 ->set一个命令加参数 set lock_user_1 value nx ex 30（但释放锁时不会判断谁持有）
                 ->SET resource_name my_random_value NX PX 30000 （设置随机数，并且只有客户端知道 lua脚本)
-                ->redisson(Redlock算法，分布式对象等api)
+                ->redisson(Redlock算法，分布式对象等api) --RedissonAutoConfiguration源码
                 https://juejin.im/post/5d9699ace51d45781d5e4baa
