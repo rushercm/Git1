@@ -212,3 +212,10 @@ redis持久化：
   RDB默认->save 900 1# 每900秒检查一次，如果有1条数据修改了，那么执行 rdb
         --fork一个子进程读取，之后替换rdb文件
 https://www.cnblogs.com/wdy1184/p/11156177.html
+
+redis分布式锁进化 set(先查有没有，没有就设置，但会存在同时设置的情况) -> setnx(set if not exist(如果不存在直接创建)，但持有锁的客户端挂掉了就不能释放)
+                ->setnx+setx(先setnx，之后setx设置过期时间（但会存在setnx和setx之间时挂掉）) 2.6.12之前这样用
+                ->set一个命令加参数 set lock_user_1 value nx ex 30（但释放锁时不会判断谁持有）
+                ->SET resource_name my_random_value NX PX 30000 （设置随机数，并且只有客户端知道 lua脚本)
+                ->redisson(Redlock算法，分布式对象等api)
+                https://juejin.im/post/5d9699ace51d45781d5e4baa
