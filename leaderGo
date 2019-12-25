@@ -132,4 +132,4 @@ IO设计模式：Actor、Reactor、Proactor;
 Storm()： spout(水龙头)-tuple(元数组)-> Bolt（处理） -tuple-> Bolt(另一个) ->---流数据无限处理中..
         zookeeper:Nimbus(主） Supervisor(从;以Topology(包含多个进程)处理) 
 
-TF-IDF与余弦相似性的应用:1.自动提取关键词 2.找出相似文章  http://www.ruanyifeng.com/blog/2013/03/tf-idf.html
+TF-IDF与余弦相似性的应用(词频，权重):1.自动提取关键词 2.找出相似文章  http://www.ruanyifeng.com/blog/2013/03/tf-idf.html
