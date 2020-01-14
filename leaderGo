@@ -133,3 +133,6 @@ Storm()： spout(水龙头)-tuple(元数组)-> Bolt（处理） -tuple-> Bolt(�
         zookeeper:Nimbus(主） Supervisor(从;以Topology(包含多个进程)处理) 
 
 TF-IDF与余弦相似性的应用(词频，权重):1.自动提取关键词 2.找出相似文章  http://www.ruanyifeng.com/blog/2013/03/tf-idf.html
+
+
+dp:空间换时间 dp自下而上 状态转移方程 记录上一步 避免无状态递归
