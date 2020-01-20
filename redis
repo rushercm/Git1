@@ -219,3 +219,5 @@ redis分布式锁进化 set(先查有没有，没有就设置，但会存在同�
                 ->SET resource_name my_random_value NX PX 30000 （设置随机数，并且只有客户端知道 lua脚本)
                 ->redisson(Redlock算法，分布式对象等api) --RedissonAutoConfiguration源码
                 https://juejin.im/post/5d9699ace51d45781d5e4baa
+
+Redis数据结构:skiplist(新插入的数据随机层数，不会影响已有数据层数--logn)； https://juejin.im/post/57fa935b0e3dd90057c50fbc
