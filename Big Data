@@ -7,3 +7,9 @@ Hive:between .. and ..(边界值)
     lead(,0,) over()：向后
     lag()over()：向前
     unix_timestamp()
+    
+Hbase:rowkey设计 http://www.nosqlnotes.com/technotes/hbase/hbase-rowkey-design/
+    -->zookeeper存meta路由信息 RegionServer存Region集群 master管理表关系
+    -->add数据时 先到memstore(内存) 足够大时flush成一个个HFile 根据HFile文件数量及大小动态Comapaction合并HFile
+    -->ColumnFamily 同一个Rowkey下有不同列
+    -->Region过大时split分裂 父子间保存的是引用
