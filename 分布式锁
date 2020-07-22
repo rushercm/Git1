@@ -343,6 +343,8 @@ redis+lua脚本:依赖于jedis传参 防止set后异常 或者集群下master挂
                                -- epoll下三个系统调用:epoll_create会创建一个epoll对象 epoll_ctl  epoll_wait
                                   --eventepoll结构体下有红黑树和双向链表 零拷贝下直接跟内核交互 存在红黑树里 双向链表只记录活跃的有返回的连接 避免了空轮询
                                   --所有添加到epoll下的对象都会与设备(网卡)驱动程序建立回掉关系 当连接有返回时epoll_callback 会将返回的事件加入到rdlist(句柄)双端链表里
-
+                                  -- ET边缘触发 LT水平触发 
+                                     -- LT模式下只要一个句柄上的事件一次没有处理完，会在以后调用epoll_wait时次次返回这个句柄，而ET模式仅在第一次返回
+                                     
           RedisTemplate<String, Object> redisTemplate = (RedisTemplate<String, Object>)appCtx.getBean("redisTemplate",RedisTemplate.class);模型
           RedisTemplate<String, Object> redisTemplate = (RedisTemplate<String, Object>)appCtx.getBean("redisTemplate",RedisTemplate.class);
