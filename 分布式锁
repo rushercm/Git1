@@ -333,3 +333,16 @@ zookeeper实现(zxid(事务id),版本号，时间戳)
 2.临时节点:create -e (当会话结束会自动删除)
 3.顺序节点: create -s (最靠前的client创建可获取锁)
 4.Paxos算法(分布式一致性(希腊城邦选举算法))
+
+
+
+redis+lua脚本:依赖于jedis传参 防止set后异常 或者集群下master挂掉 
+   --redis线程模型 Reactor线程模型下epoll
+                               -- select下有最大并发数 依赖于linux系统最大socket连接数 /proc/sys/..  默认 32*32= 1024 修改FD_SETSIZE
+                               -- 但select和poll都阻塞select 需要轮询所有连接 牵涉到内核态和用户态来回复制
+                               -- epoll下三个系统调用:epoll_create会创建一个epoll对象 epoll_ctl  epoll_wait
+                                  --eventepoll结构体下有红黑树和双向链表 零拷贝下直接跟内核交互 存在红黑树里 双向链表只记录活跃的有返回的连接 避免了空轮询
+                                  --所有添加到epoll下的对象都会与设备(网卡)驱动程序建立回掉关系 当连接有返回时epoll_callback 会将返回的事件加入到rdlist(句柄)双端链表里
+
+          RedisTemplate<String, Object> redisTemplate = (RedisTemplate<String, Object>)appCtx.getBean("redisTemplate",RedisTemplate.class);模型
+          RedisTemplate<String, Object> redisTemplate = (RedisTemplate<String, Object>)appCtx.getBean("redisTemplate",RedisTemplate.class);
